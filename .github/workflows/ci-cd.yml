@@ -29,6 +29,9 @@ jobs:
         run: |
           pytest tests/ --verbose
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
       - name: Build Docker images
         run: |
           docker build -t mental-health-ml-api -f Dockerfile.api .
@@ -36,8 +39,8 @@ jobs:
 
       - name: Run Docker Compose
         run: |
-          docker-compose -f docker-compose.yml up -d
+          docker compose -f docker-compose.yml up -d
           sleep 30
           curl -f http://localhost:8000/health || exit 1
           curl -f http://localhost:8501 || exit 1
-          docker-compose down
+          docker compose down
