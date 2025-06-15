@@ -3,3 +3,5 @@
 .dockerignore 
 .env 
 venv 
+.env 
+venv 
