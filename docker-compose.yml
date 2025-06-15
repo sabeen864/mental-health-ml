@@ -1,3 +1,5 @@
+version: '3.9'
+
 services:
   streamlit:
     build:
@@ -11,8 +13,9 @@ services:
       - api
     networks:
       - app-network
-    env_file:
-      - .env
+    environment:
+      AZURE_CONNECTION_STRING: "${AZURE_CONNECTION_STRING}"
+
   api:
     build:
       context: .
@@ -21,10 +24,11 @@ services:
       - "8000:8000"
     volumes:
       - .:/app
-    env_file:
-      - .env
     networks:
       - app-network
+    environment:
+      AZURE_CONNECTION_STRING: "${AZURE_CONNECTION_STRING}"
+
 networks:
   app-network:
     driver: bridge
