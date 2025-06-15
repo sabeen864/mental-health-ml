@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/DELL/mental-health-ml/mlruns/169078089252648415/e544bceda2804164869a78b3c0139e12/artifacts
+end_time: 1749909348427
+entry_point_name: ''
+experiment_id: '169078089252648415'
+lifecycle_stage: active
+run_id: e544bceda2804164869a78b3c0139e12
+run_name: Best_LogisticRegression
+run_uuid: e544bceda2804164869a78b3c0139e12
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749909343136
+status: 3
+tags: []
+user_id: DELL

@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/DELL/mental-health-ml/mlruns/169078089252648415/ea455f3d9e854553814e710059215179/artifacts
+end_time: 1749909338313
+entry_point_name: ''
+experiment_id: '169078089252648415'
+lifecycle_stage: active
+run_id: ea455f3d9e854553814e710059215179
+run_name: XGBoost
+run_uuid: ea455f3d9e854553814e710059215179
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749909332540
+status: 3
+tags: []
+user_id: DELL
