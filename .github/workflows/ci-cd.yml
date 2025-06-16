@@ -35,12 +35,12 @@ jobs:
 
       - name: Build Docker images
         run: |
-          docker build -t mental-health-ml-api -f Dockerfile.api .
-          docker build -t mental-health-ml-streamlit -f Dockerfile.streamlit .
+          docker build -t mental-health-ml-api -f docker/Dockerfile.api .
+          docker build -t mental-health-ml-streamlit -f docker/Dockerfile.streamlit .
 
       - name: Run Docker Compose with Azure connection string
         run: |
-          AZURE_CONNECTION_STRING="${{ secrets.AZURE_CONNECTION_STRING }}" docker compose -f docker-compose.yml up -d
+          AZURE_CONNECTION_STRING="${{ secrets.AZURE_CONNECTION_STRING }}" docker compose -f docker/docker-compose.yml up -d
           sleep 30
           curl -f http://localhost:8000/health || exit 1
           curl -f http://localhost:8501 || exit 1
@@ -58,3 +58,10 @@ jobs:
           docker tag mental-health-ml-streamlit ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-streamlit:latest
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-api:latest
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-streamlit:latest
+            
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: mental-health-ml-api
+          images: sabeen123/mental-health-ml-api:latest
+          credentials: ${{ secrets.AZURE_CREDENTIALS }}
