@@ -1,34 +1,27 @@
-version: '3.9'
-
 services:
-  streamlit:
-    build:
-      context: .
-      dockerfile: Dockerfile.streamlit
-    ports:
-      - "8501:8501"
-    volumes:
-      - .:/app
-    depends_on:
-      - api
-    networks:
-      - app-network
-    environment:
-      AZURE_CONNECTION_STRING: "${AZURE_CONNECTION_STRING}"
-
   api:
     build:
       context: .
       dockerfile: Dockerfile.api
     ports:
       - "8000:8000"
-    volumes:
-      - .:/app
+    environment:
+      - AZURE_CONNECTION_STRING=${AZURE_CONNECTION_STRING}
+      - APPLICATIONINSIGHTS_CONNECTION_STRING=${APPLICATIONINSIGHTS_CONNECTION_STRING}
     networks:
       - app-network
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    ports:
+      - "8501:8501"
     environment:
-      AZURE_CONNECTION_STRING: "${AZURE_CONNECTION_STRING}"
-
+      - AZURE_CONNECTION_STRING=${AZURE_CONNECTION_STRING}
+    depends_on:
+      - api
+    networks:
+      - app-network
 networks:
   app-network:
     driver: bridge
