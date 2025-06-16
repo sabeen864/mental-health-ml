@@ -64,4 +64,3 @@ jobs:
         with:
           app-name: mental-health-ml-api
           images: sabeen123/mental-health-ml-api:latest
-          credentials: ${{ secrets.AZURE_CREDENTIALS }}
