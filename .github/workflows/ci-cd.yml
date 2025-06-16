@@ -58,7 +58,12 @@ jobs:
           docker tag mental-health-ml-streamlit ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-streamlit:latest
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-api:latest
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-streamlit:latest
-            
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+               
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v3
         with:
