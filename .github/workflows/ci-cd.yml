@@ -35,8 +35,8 @@ jobs:
 
       - name: Build Docker images
         run: |
-          docker build -t mental-health-ml-api -f docker/Dockerfile.api .
-          docker build -t mental-health-ml-streamlit -f docker/Dockerfile.streamlit .
+          docker build -t mental-health-ml-api -f Dockerfile.api .
+          docker build -t mental-health-ml-streamlit -f Dockerfile.streamlit .
 
       - name: Run Docker Compose with Azure connection string
         run: |
