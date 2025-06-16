@@ -40,7 +40,7 @@ jobs:
 
       - name: Run Docker Compose with Azure connection string
         run: |
-          AZURE_CONNECTION_STRING="${{ secrets.AZURE_CONNECTION_STRING }}" docker compose -f docker/docker-compose.yml up -d
+          AZURE_CONNECTION_STRING="${{ secrets.AZURE_CONNECTION_STRING }}" docker compose -f docker-compose.yml up -d
           sleep 30
           curl -f http://localhost:8000/health || exit 1
           curl -f http://localhost:8501 || exit 1
