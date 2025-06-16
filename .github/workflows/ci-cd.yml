@@ -1,71 +1,58 @@
 name: Mental Health ML CI/CD Sabeen
-
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
-
+    branches: [ main ]
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-
+    env:
+      AZURE_CONNECTION_STRING: ${{ secrets.AZURE_CONNECTION_STRING }}
+      APPLICATIONINSIGHTS_CONNECTION_STRING: ${{ secrets.APPLICATIONINSIGHTS_CONNECTION_STRING }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
           pip install pytest
-
       - name: Run tests
-        run: |
-          pytest tests/ --verbose
-
+        run: pytest tests/ --verbose
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-
       - name: Build Docker images
         run: |
           docker build -t mental-health-ml-api -f Dockerfile.api .
           docker build -t mental-health-ml-streamlit -f Dockerfile.streamlit .
-
-      - name: Run Docker Compose with Azure connection string
+      - name: Run Docker Compose
         run: |
-          AZURE_CONNECTION_STRING="${{ secrets.AZURE_CONNECTION_STRING }}" docker compose -f docker-compose.yml up -d
-          sleep 30
-          curl -f http://localhost:8000/health || exit 1
-          curl -f http://localhost:8501 || exit 1
+          docker compose -f docker-compose.yml up -d
+          sleep 60  # Increased for stability
+          curl -f http://api:8000/health || exit 1
+          curl -f http://streamlit:8501 || exit 1
           docker compose down
-      
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
       - name: Push Docker images
         run: |
           docker tag mental-health-ml-api ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-api:latest
           docker tag mental-health-ml-streamlit ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-streamlit:latest
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-api:latest
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-streamlit:latest
-
       - name: Azure Login
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-               
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v3
         with:
-          app-name: mental-health-ml-api
-          images: sabeen123/mental-health-ml-api:latest
+          app-name: mental-health-ml-api-2025
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-api:latest
