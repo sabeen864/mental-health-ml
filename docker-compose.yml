@@ -16,9 +16,10 @@ services:
       context: .
       dockerfile: Dockerfile.streamlit
     ports:
-      - "8001:8000"   # 👈 External port 8001, container port 8000
+      - "8501:8501"
     environment:
       - AZURE_CONNECTION_STRING=${AZURE_CONNECTION_STRING}
+      - APPLICATIONINSIGHTS_CONNECTION_STRING=${APPLICATIONINSIGHTS_CONNECTION_STRING}
     depends_on:
       - api
     networks:
