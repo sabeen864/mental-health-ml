@@ -1,0 +1,321 @@
+2025-06-16 23:27:03,516 | azure.core.pipeline.policies.http_logging_policy | INFO | Request URL: 'https://mentalhealthstorage036.blob.core.windows.net/models/LogisticRegression_model.pkl'
+Request method: 'GET'
+Request headers:
+    'x-ms-range': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.1 Python/3.13.2 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '800faa6e-4adf-11f0-b019-645d8643a4df'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-16 23:27:04,870 | azure.core.pipeline.policies.http_logging_policy | INFO | Response status: 206
+Response headers:
+    'Content-Length': '1723'
+    'Content-Type': 'application/octet-stream'
+    'Content-Range': 'REDACTED'
+    'Last-Modified': 'Sun, 15 Jun 2025 10:14:59 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DDABF57C31533E"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '7cae1891-c01e-0015-66ec-dee735000000'
+    'x-ms-client-request-id': '800faa6e-4adf-11f0-b019-645d8643a4df'
+    'x-ms-version': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-blob-content-md5': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 18:27:06 GMT'
+2025-06-16 23:27:04,873 | mental-health-api | INFO | Model download attempted (if required).
+2025-06-16 23:27:05,725 | mental-health-api | INFO | Model loaded successfully.
+2025-06-16 23:51:43,587 | mental-health-api | INFO | Health check requested.
+2025-06-16 23:54:15,136 | mental-health-api | INFO | Health check requested.
+2025-06-16 23:54:28,149 | mental-health-api | INFO | Prediction requested with data: {'Age': 30, 'Gender': 'Male', 'family_history': 'Yes', 'benefits': 'Yes', 'care_options': 'No', 'anonymity': 'Yes', 'leave': 'Rarely', 'work_interfere': 'Sometimes', 'self_employed': 'No', 'remote_work': 'Yes'}
+2025-06-16 23:54:28,185 | mental-health-api | INFO | Prediction completed: 1
+2025-06-16 19:59:14,210 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://westus-0.in.applicationinsights.azure.com//v2.1/track'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '1489'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '609caeb2-4aec-11f0-b409-52585273eefe'
+    'User-Agent': 'azsdk-python-azuremonitorclient/unknown Python/3.10.18 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+2025-06-16 19:59:15,943 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 19:59:16 GMT'
+2025-06-16 19:59:15,952 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://mentalhealthstorage036.blob.core.windows.net/models/LogisticRegression_model.pkl'
+Request method: 'GET'
+Request headers:
+    'x-ms-range': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.10.18 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '61a68396-4aec-11f0-b409-52585273eefe'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-16 19:59:17,284 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 206
+Response headers:
+    'Content-Length': '1723'
+    'Content-Type': 'application/octet-stream'
+    'Content-Range': 'REDACTED'
+    'Last-Modified': 'Sun, 15 Jun 2025 10:14:59 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DDABF57C31533E"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '34d44a95-901e-0055-3bf9-dee00d000000'
+    'x-ms-client-request-id': '61a68396-4aec-11f0-b409-52585273eefe'
+    'x-ms-version': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-blob-content-md5': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 19:59:18 GMT'
+2025-06-16 19:59:17,288 - app.main - INFO - Model download attempted (if required).
+2025-06-16 19:59:17,359 - app.main - INFO - Model loaded successfully.
+2025-06-16 21:11:54,352 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://westus-0.in.applicationinsights.azure.com//v2.1/track'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '1483'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '877583c4-4af6-11f0-9382-5ada280a2dd5'
+    'User-Agent': 'azsdk-python-azuremonitorclient/unknown Python/3.9.23 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+2025-06-16 21:11:56,382 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 21:11:58 GMT'
+2025-06-16 21:11:56,392 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://mentalhealthstorage036.blob.core.windows.net/models/LogisticRegression_model.pkl'
+Request method: 'GET'
+Request headers:
+    'x-ms-range': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.9.23 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '88acd6fc-4af6-11f0-9382-5ada280a2dd5'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-16 21:11:57,806 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 206
+Response headers:
+    'Content-Length': '1723'
+    'Content-Type': 'application/octet-stream'
+    'Content-Range': 'REDACTED'
+    'Last-Modified': 'Sun, 15 Jun 2025 10:14:59 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DDABF57C31533E"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '4a9facff-e01e-002d-6a03-df43f5000000'
+    'x-ms-client-request-id': '88acd6fc-4af6-11f0-9382-5ada280a2dd5'
+    'x-ms-version': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-blob-content-md5': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 21:12:00 GMT'
+2025-06-16 21:11:57,810 - app.main - INFO - Model download attempted (if required).
+2025-06-16 21:11:57,878 - app.main - INFO - Model loaded successfully.
+2025-06-16 21:13:02,349 - app.main - INFO - Root endpoint accessed.
+2025-06-16 21:13:06,398 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://westus2-2.in.applicationinsights.azure.com//v2.1/track'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '3570'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'b266c21e-4af6-11f0-8047-5ada280a2dd5'
+    'User-Agent': 'azsdk-python-azuremonitorclient/unknown Python/3.9.23 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+2025-06-16 21:13:08,038 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 21:13:09 GMT'
+2025-06-16 21:13:08,039 - azure.monitor.opentelemetry.exporter.export._base - INFO - Transmission succeeded: Item received: 4. Items accepted: 4
+2025-06-16 21:17:37,625 - app.main - INFO - Health check requested.
+2025-06-16 21:17:38,034 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://westus2-2.in.applicationinsights.azure.com//v2.1/track'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '3600'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '544f357a-4af7-11f0-8047-5ada280a2dd5'
+    'User-Agent': 'azsdk-python-azuremonitorclient/unknown Python/3.9.23 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+2025-06-16 21:17:39,829 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 21:17:41 GMT'
+2025-06-16 21:17:39,830 - azure.monitor.opentelemetry.exporter.export._base - INFO - Transmission succeeded: Item received: 4. Items accepted: 4
+2025-06-16 21:26:54,264 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://westus-0.in.applicationinsights.azure.com//v2.1/track'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '1583'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '9fd91f6e-4af8-11f0-8fce-5ada280a2dd5'
+    'User-Agent': 'azsdk-python-azuremonitorclient/unknown Python/3.9.23 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+2025-06-16 21:26:56,069 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 21:26:58 GMT'
+2025-06-16 21:28:06,134 - app.main - INFO - Prediction requested with data: {'Age': 30, 'Gender': 'Male', 'family_history': 'Yes', 'benefits': 'Yes', 'care_options': 'Yes', 'anonymity': 'Yes', 'leave': 'Never', 'work_interfere': 'Never', 'self_employed': 'Yes', 'remote_work': 'Yes'}
+2025-06-16 21:28:06,165 - app.main - INFO - Prediction completed: 1
+2025-06-16 21:28:09,821 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://westus2-2.in.applicationinsights.azure.com//v2.1/track'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '4572'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'cce237de-4af8-11f0-8047-5ada280a2dd5'
+    'User-Agent': 'azsdk-python-azuremonitorclient/unknown Python/3.9.23 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+2025-06-16 21:28:11,520 - app.main - INFO - Root endpoint accessed.
+2025-06-16 21:28:11,546 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 21:28:13 GMT'
+2025-06-16 21:28:11,547 - azure.monitor.opentelemetry.exporter.export._base - INFO - Transmission succeeded: Item received: 5. Items accepted: 5
+2025-06-16 21:28:16,552 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://westus2-2.in.applicationinsights.azure.com//v2.1/track'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '6608'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'd0e55596-4af8-11f0-8047-5ada280a2dd5'
+    'User-Agent': 'azsdk-python-azuremonitorclient/unknown Python/3.9.23 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+2025-06-16 21:28:16,895 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 21:28:18 GMT'
+2025-06-16 21:28:16,896 - azure.monitor.opentelemetry.exporter.export._base - INFO - Transmission succeeded: Item received: 7. Items accepted: 7
+2025-06-16 21:30:23,774 - app.main - INFO - Health check requested.
+2025-06-16 21:30:26,897 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://westus2-2.in.applicationinsights.azure.com//v2.1/track'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '3601'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '1e967c98-4af9-11f0-8047-5ada280a2dd5'
+    'User-Agent': 'azsdk-python-azuremonitorclient/unknown Python/3.9.23 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+2025-06-16 21:30:29,045 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 21:30:31 GMT'
+2025-06-16 21:30:29,046 - azure.monitor.opentelemetry.exporter.export._base - INFO - Transmission succeeded: Item received: 4. Items accepted: 4
+2025-06-16 21:40:14,639 - app.main - INFO - Prediction requested with data: {'Age': 30, 'Gender': 'Male', 'family_history': 'Yes', 'benefits': 'Yes', 'care_options': 'Yes', 'anonymity': 'Yes', 'leave': 'Never', 'work_interfere': 'Never', 'self_employed': 'Yes', 'remote_work': 'Yes'}
+2025-06-16 21:40:14,653 - app.main - INFO - Prediction completed: 1
+2025-06-16 21:40:19,045 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://westus2-2.in.applicationinsights.azure.com//v2.1/track'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '4573'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '7f88f9da-4afa-11f0-8047-5ada280a2dd5'
+    'User-Agent': 'azsdk-python-azuremonitorclient/unknown Python/3.9.23 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+2025-06-16 21:40:21,767 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 21:40:23 GMT'
+2025-06-16 21:40:21,768 - azure.monitor.opentelemetry.exporter.export._base - INFO - Transmission succeeded: Item received: 5. Items accepted: 5
+2025-06-16 21:41:56,000 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://westus-0.in.applicationinsights.azure.com//v2.1/track'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '1583'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'b95326ae-4afa-11f0-8fce-5ada280a2dd5'
+    'User-Agent': 'azsdk-python-azuremonitorclient/unknown Python/3.9.23 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+2025-06-16 21:41:57,813 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Mon, 16 Jun 2025 21:42:00 GMT'
+2025-06-17 04:21:39,626 - app.main - INFO - Prediction requested with data: {'Age': 30, 'Gender': 'Male', 'family_history': 'Yes', 'benefits': 'Yes', 'care_options': 'Yes', 'anonymity': 'No', 'leave': 'Never', 'work_interfere': 'Often', 'self_employed': 'Yes', 'remote_work': 'Yes'}
+2025-06-17 04:21:39,661 - app.main - INFO - Prediction completed: 1
+2025-06-17 04:21:44,586 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://westus2-2.in.applicationinsights.azure.com//v2.1/track'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '4573'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '93a2c31e-4b32-11f0-8047-5ada280a2dd5'
+    'User-Agent': 'azsdk-python-azuremonitorclient/unknown Python/3.9.23 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+2025-06-17 04:21:46,732 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Tue, 17 Jun 2025 04:21:45 GMT'
+2025-06-17 04:21:46,734 - azure.monitor.opentelemetry.exporter.export._base - INFO - Transmission succeeded: Item received: 5. Items accepted: 5
+2025-06-17 04:30:05,488 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://westus-0.in.applicationinsights.azure.com//v2.1/track'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '1582'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'be328c08-4b33-11f0-8fce-5ada280a2dd5'
+    'User-Agent': 'azsdk-python-azuremonitorclient/unknown Python/3.9.23 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+2025-06-17 04:30:08,010 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Tue, 17 Jun 2025 04:30:07 GMT'

@@ -34,7 +34,11 @@ if st.button("🔍 Predict"):
     }
 
     try:
-        res = requests.post("http://api:8000/predict", json=input_data)
+        res = requests.post(
+            "https://mental-health-ml-api-ctexdderg6asfpf3.canadacentral-01.azurewebsites.net/predict",
+            json=input_data
+        )
+
         if res.status_code == 200:
             prediction = res.json()['prediction']
             st.success(f"Prediction: {prediction}")

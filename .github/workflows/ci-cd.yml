@@ -51,8 +51,14 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - name: Deploy to Azure App Service
+      - name: Deploy API to Azure App Service
         uses: azure/webapps-deploy@v3
         with:
-          app-name: mental-health-ml-api-2025
+          app-name: mental-health-ml-api
           images: ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-api:latest
+
+      - name: Deploy Streamlit to Azure App Service
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: mental-health-ml-streamlit
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/mental-health-ml-streamlit:latest
